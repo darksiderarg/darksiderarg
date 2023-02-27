@@ -1,0 +1,462 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+
+   
+    caret-color: transparent;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: hsl(64, 100%, 55%);
+    background-image: url(../assets/bg-texture.png);
+    color: #ffffff;
+    background: linear-gradient(rgba(0, 0, 0, 0.952), rgb(141, 41, 255));
+    transition: 1s ease;
+    font-family: 'Urbanist';font-size: 16px; font-weight: lighter;
+}
+/*@media screen and (min-width: 767px){*/
+    .nav{
+        position: fixed;
+        
+        width: calc(200px + 20%);
+        height: 75px;
+
+        border-radius: 45px 45px 45px 45px;
+        bottom: 5vh;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        left: 0;
+        right: 0;
+
+        box-shadow: 0px 0px 25px rgba(26, 26, 26, 0.486);
+        backdrop-filter: blur(50px);
+        
+        z-index: 1;
+    }
+    .nav_container{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        height: 100%;
+    }
+    .nav_icon{
+        color: whitesmoke;
+        font-size: 20px;
+        width: 50px;
+        height: 50px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 50%;
+    }
+    .nav_icon:hover{
+        color: #1ef5bf;
+        background-color: #deff00;
+    }
+    .gridAncho{
+        display: grid;
+        grid-template-columns: 10% 80% 10%;
+    }
+    .gridAjustado{
+        display: grid;
+        grid-template-columns: 2.5% 95% 2.5%;
+    }
+    .main_asideLeft{
+        position: relative;
+    }
+    .header_center{
+        text-align: center;
+    }
+    .titulo{
+        font-size: calc(25px + 2vw);
+        color: #deff00;
+    }
+    .tituloColores{
+        font-size: calc(20px + 1.5vw);
+    }
+    .subTitulo{
+        font-weight: 500;
+        font-style: oblique;
+        color: rgb(255, 255, 255);
+        font-size: calc(10px + 1vw);
+    }
+    .marginTopChico{
+        margin-top: 15px;
+    }
+    .marginTopGrande{
+        margin-top: 50px;
+    }
+    .header_asideLeft{
+        position: relative;
+        height: 100vh;
+    }
+    .header_asideTextContainer{
+        position: absolute;
+        bottom: 20vh;
+        left: 10%;
+    }
+    .header_asideText{
+        writing-mode: vertical-lr;
+        color: #deff00;
+        font-size: 20px;
+    }
+    .header_line{
+        border-left: 1px solid #deff00;
+        height: 150px;
+        position: absolute;
+        left: 50%;
+        margin-left: -1.5px;
+        top: 0;
+    }
+    .header_lineContainer{
+        position: relative;
+        color: #deff00;
+    }
+    .header_linksContainer{
+        display: flex;
+        flex-direction: column;
+        color: #deff00;
+        position: absolute;
+        right: 10%;
+        bottom: 20vh;
+    }
+    .header_linkIcon{
+        color: #deff00;
+        font-size: calc(15px + 45%);
+        margin-bottom: 10px;
+        z-index: 1;
+    }
+    .header_linkIcon:hover{
+        color: #deff00;
+        transform: scale(1.2);
+    }
+    .header_containerBotones{
+        margin-top: calc(1px + 1.5%);
+        width: 100%;
+        /*
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;*/
+    }
+    .header_linkBotones{
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    .header_boton{
+        font-size: calc(15px + 1vw);
+        border: 1px solid #deff00;
+        color: #deff00;
+        border-radius: 20px 20px 20px 20px;
+        
+        height: calc(55px + 2vw);
+        width: calc(230px + 5vw);
+        
+        display: table-cell;
+        vertical-align: middle;
+
+        transition-property: 2s ease;
+    }
+    .header_boton:hover{
+        color: #deff00;
+        margin: 0px auto;
+        transform: scale(1.05);
+    }
+    .header_boton:active{
+        border: 1px solid #3636aa;
+        color: #3636aa;
+    }
+    .botonDerecho{
+        /*background-color: #00aeff;
+        background-color: rgb(255, 212, 220);
+        color: #1f1f38;*/
+        background-color: rgba(255, 192, 203, 0.466);
+        color: #deff00;
+    }
+    .botonDerecho:hover{
+        color: #deff00;
+    }
+    .botonDerecho:active{
+        border: 1px solid 9000ff;
+        color: #9000ff;
+    }
+    .header_containerImagen{
+        position: absolute;
+        bottom: 0;
+
+        left: 0; 
+        right: 0; 
+        margin-left: auto; 
+        margin-right: auto;
+    }
+    .header_containerImagenHijo{
+        width: calc( 200px + 15%);
+        height: 65vh;
+    
+        position: relative;
+    
+        border-radius: 500px 500px 0px 0px;
+    
+        margin: 0px auto;
+        /*background-image: linear-gradient(180deg, rgb(0, 174, 255), #1f1f381f);*/
+        background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.473), rgba(255, 192, 203, 0.466));
+    }
+    .header_imagen{
+        height: auto;
+        width: calc(105px + 50%);
+
+        border-radius: 250px 250px 0 0;
+
+        position: absolute;
+
+        bottom: 0;
+        left: 0px;
+        right: 0px;
+
+        margin: 0 auto;
+    }
+    .cuerpo_AcercaDeMi{
+        display: flex;
+        flex-direction: row;
+
+        margin-top: 100px;
+    }
+    .cuerpo_AcercaDeMi-imagen{
+        margin-right: 5%;
+
+        width: 40%;
+        display: flex;
+        justify-content: center;
+
+    }
+    .cuerpo_AcercaDeMi-texto{
+        margin-left: 5%;
+
+        width: 40%;
+    }
+    .cuerpo_containerTarjetas{
+        display: flex;
+        justify-content: left;
+    }
+    .cuerpo_tarjeta{
+        width: calc(10% + 250px);
+        height: 350px;
+
+        margin: 1%;
+        border-radius: 20px;
+
+        background-color: #9000ff;
+        border: solid 1px #deff00;
+
+        display: grid;
+        grid-template-rows: 25% 25% 15% 35%;
+        
+    }
+    .cuerpo_icono{
+        font-size: calc(30px);
+        color: #deff00;
+    }
+    .cuerpo_descripcion{
+       
+        line-height: 40px;
+        text-align: justify;
+
+        margin-top: 30px;
+    }
+    .cuerpo_charlemos{
+        float: left;
+
+        margin-top: 30px;
+
+        font-size: calc(15px + 1vw);
+        border: 1px solid #9000ee;
+        
+        background-color: #9000ff;
+        color: #000000;
+
+        border-radius: 20px 20px 20px 20px;
+        
+        height: calc(55px + 2vw);
+        width: calc(230px + 5vw);
+        
+        display: table-cell;
+        vertical-align: middle;
+
+        transition-property: 2s ease;
+
+        cursor: pointer;
+    }
+    .cuerpo_charlemos:hover{
+        color: #0086c4;
+        transform: scale(1.05);
+    }
+    .cuerpo_charlemos:active{
+        border: 1px solid #3636aa;
+        color: #3636aa;
+    }
+    
+    .cuerpo_experiencia{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 49% 2% 49%;
+    }
+    .cuerpo_experiencia-front{
+        border-radius: 50px;
+        background-color: #3636aac9;
+        border: solid 1px #3636aa;
+        width: 100%;
+    }
+    .cuerpo_experiencia-contenedorTarjetas{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .cuerpo_experiencia-tarjeta{
+        display: grid;
+        grid-template-columns: 30% 70%;
+        grid-template-rows: auto;
+        width: 180px;
+        height: 70px;
+        border-radius: 10px;
+        text-align: left;
+        margin: 10px;
+        font-size: 16px;
+    }
+    .cuerpo_experiencia-icono{
+        margin: 2.5px auto 0;
+        color: #0086c4;
+    }
+    .portafolio_container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        border-radius: 30px;
+        background: linear-gradient(#00aeff6e, #3636aa71);
+    }
+    .portafolio_tarjetas{
+        margin: 20px;
+        padding-top: 30px;
+
+        width: 100%;
+        height: auto;
+        border-radius: 0 90% / 0 100%;
+        background-color: #3636aac9;
+        border: solid 1px #3636aa;
+    }
+    .portafolio_imagen{
+        width: 70%;
+        border-radius: 30px;
+    }
+    footer{
+        border-top: 1px solid #0086c4;
+        background-color: rgb(10, 10, 10);
+
+        width: 100%;
+        height: 200px;
+    }
+
+@media screen and (max-width: 480px){
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    body{   
+        width: 100%;
+    }
+    nav{
+        bottom: calc(10vh + 10px);
+    }
+    .header_containerImagenHijo{
+        height: 60vh;
+    }
+    .header_boton{
+        font-size: 15px;
+
+        height: 55px;
+        width: 230px;
+
+    }
+    .main_imagen{
+        width: 250px;
+    }
+    .main_rectangulo1{
+        width: 250px;
+        height: 325px;
+        margin: 0 auto 0;
+    }
+    .main_rectangulo2{
+        width: 250px;
+        height: 325px;
+    }
+    .cuerpo_AcercaDeMi{
+        margin-top: 0;
+        display: block;
+    }
+    .cuerpo_AcercaDeMi-imagen{
+        margin-right: 0;
+        margin-left: 0;
+
+        width: 100%;
+        height: 370px;
+        
+        align-content: center;
+        align-items: center;
+
+        justify-content: center;
+
+        position: relative;
+
+        overflow: hidden;
+    }
+    .cuerpo_AcercaDeMi-texto{
+        margin-left:  0px;
+        margin-right: 0px;
+        
+        margin-top: 50px;
+        width: 100%;
+    }
+    .cuerpo_descripcion{
+        margin-left: 20px;
+        margin-right: 20px;
+        color: #000000
+    }
+    .cuerpo_containerTarjetas{
+        width: 100%;
+    }
+    .cuerpo_tarjeta{
+        width: 33%;
+    }
+    .cuerpo_charlemos{
+        float: none;
+    }
+    .cuerpo_experiencia{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+    }
+    .cuerpo_experiencia-front{
+        width: 90%;
+        margin-left:  auto;
+        margin-right: auto;
+    }
+    .footer{
+        width: 100%;
+        color: #ffffff;
+        }
+        
+}/*
+@media screen and (min-width: 480px) and (max-width: 767px){
+    body{   
+        background-color: blue;
+    }
+}
